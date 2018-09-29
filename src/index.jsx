@@ -1,8 +1,4 @@
-import React, { Component } from 'react';
-import { Row } from 'antd';
+import BaseForm from '@/components/BaseForm/index.jsx';
+import Layout from './components/Layout/index.jsx';
 
-export default class HelloWebpack extends Component {
-  render() {
-    return <h1>Hello, Webpack</h1>;
-  }
-}
+export { Layout, BaseForm };
