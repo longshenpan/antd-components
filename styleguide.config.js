@@ -15,9 +15,10 @@ module.exports = {
     borderRadius: 5,
     maxWidth: 10000,
   },
-  getComponentPathLine: function(componentPath) {
+  getComponentPathLine(componentPath) {
     return ``;
   },
+  // 编辑区域的样式设置
   editorConfig: {
     theme: 'base16-dark',
     lineNumbers: true,
@@ -42,30 +43,34 @@ module.exports = {
     },
   },
   styleguideComponents: {
+    // 在渲染组件包一层
     Wrapper: path.join(__dirname, 'styleguideconfig/styleguideComponents/Wrapper.js'),
-    // LogoRenderer: path.join(__dirname, 'styleguide/components/Logo'),
-    // StyleGuideRenderer: path.join(__dirname, 'lib/styleguide/StyleGuide'),
-    SectionsRenderer: path.join(__dirname, 'styleguideconfig/styleguideComponents/SectionsRenderer.jsx'),
+    // logo图片
+    // LogoRenderer: path.join(__dirname, 'styleguideconfig/styleguideComponents/Logo.js'),
+    // 修改整个页面的布局
+    // StyleGuideRenderer: path.join(__dirname, 'styleguideconfig/styleguideComponents/StyleGuide.js'),
+    // 内容区域wrapper
+    // SectionsRenderer: path.join(__dirname, 'styleguideconfig/styleguideComponents/SectionsRenderer.jsx'),
   },
   usageMode: 'expand',
   exampleMode: 'expand',
   sections: [
     {
-      name: '组件使用指南',
-      sections: [{
-        name: '子元素',
-        content: './markdown/original.md',
-      }],
+      name: '基础组件',
+      content: './src/components/Basic/readme.md',
+      components: 'src/components/Basic/**/index.jsx',
       sectionDepth: 1,
     },
     {
-      name: '组件使用指南2',
-      content: './markdown/radio.md',
+      name: '组合组件',
+      content: './src/components/Combination/readme.md',
+      components: './src/components/Combination/**/index.jsx',
+      sectionDepth: 1,
     },
     {
-      name: '自定义UI组件',
-      content: './markdown/customized.md',
-      components: 'src/components/**/index.jsx',
+      name: '业务组件',
+      content: './src/components/Business/readme.md',
+      components: './src/components/Business/**/index.jsx',
       sectionDepth: 1,
     },
   ],

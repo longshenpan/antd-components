@@ -1,0 +1,29 @@
+@import '~antd/lib/style/themes/default.less';
+.supply-component-async-wrapper{
+  text-align: center;
+
+  &__prompt{
+    padding-bottom: 10px;
+  }
+
+  &__btn{
+    color: @info-color;
+  }
+  &--inline{
+    text-align: left;
+    .anticon{
+      color:@warning-color;
+    }
+    .supply-component-async-wrapper{
+      &__prompt{
+        padding:0 20px;
+        display: inline-block;
+        padding-bottom: 0;
+      }
+
+      &__btn{
+        display: inline-block;
+      }
+    }
+  }
+}

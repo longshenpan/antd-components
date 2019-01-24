@@ -6,10 +6,9 @@ const history = createHistory();
 
 export default class Wrapper extends Component {
   render() {
-    console.log('wrapper');
     return (
       <Router history={history}>
-        <div style={{backgroundColor: 'red'}}>
+        <div>
           {this.props.children}
         </div>
       </Router>

@@ -1,0 +1,35 @@
+@import '~antd/lib/style/themes/default.less';
+
+.basic-container{
+    display: inline-block;
+    position: relative;
+    height: 30px;
+
+    .basic-datepicker{
+        .ant-calendar-picker-input{
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+          &::before{
+           content:'xxx';
+          }
+        }  
+    }
+
+     .prefix-text{
+        color: #d9d9d9;
+        top: 50%;
+        left: 10px;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+
+     .suffix-text{
+        display: inline-block;
+        width: 50px;
+        color: #d9d9d9;
+        top: 50%;
+        position: absolute;
+        transform: translate(-70px,-50%);
+    }
+}

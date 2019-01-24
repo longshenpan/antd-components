@@ -62,7 +62,8 @@ const styles = ({ font, base, light, link, baseBackground, mq }) => ({
   },
 });
 
-export function StyleGuideRenderer({ classes, title, homepageUrl, children }) {
+export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc,
+  hasSidebar }) {
   return (
     <div className={classes.root}>
       <header className={classes.header}>
@@ -95,6 +96,7 @@ export function StyleGuideRenderer({ classes, title, homepageUrl, children }) {
           <Markdown text={`Created with [React Styleguidist](${homepageUrl}) ❤️`} />
         </footer>
       </main>
+      {hasSidebar && <div className="sidebar">{toc}</div>}
     </div>
   );
 }

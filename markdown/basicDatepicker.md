@@ -2,7 +2,7 @@
 
 ```jsx
 const moment = require('moment');
-const BasicDatePicker = require('../src/components/BasicDatePicker').default;
+const BasicDatePicker = require('../src/components/Basic/BasicDatePicker').default;
 initialState={weekOne:'星期四',weekTwo:'星期五'};
 
 <div>
