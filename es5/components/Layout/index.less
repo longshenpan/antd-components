@@ -1,0 +1,58 @@
+@import '~antd/lib/style/themes/default.less';
+.layout-container {
+  display: flex;
+  .nav-left {
+    position: relative;
+    height: calc(100vh);
+    background-color: #001529;
+    transition: all 0.3s ease;
+    width: 200px;
+    & .ant-menu {
+      & > .ant-menu-item {
+        margin: 16px 0;
+
+        & > a {
+          display: inline-block;
+        }
+
+        &:hover {
+          transition: all 0s ease;
+          color: @text-color-dark;
+          background: @primary-5;
+        }
+
+        & > .anticon {
+          transition: font-size 0.3s;
+        }
+      }
+    }
+  }
+  .layout-main {
+    flex: 1;
+    height: calc(100vh);
+    background-color: #f1f3f5;
+    .layout-header {
+      box-sizing: border-box;
+      height: 60px;
+    }
+    .layout-content {
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      height: calc(~'100% - 140px');
+      margin: 10px 0;
+      padding: 0 10px;
+      overflow-y: auto;
+    }
+    .layout-footer {
+      box-sizing: border-box;
+      height: 60px;
+    }
+  }
+}
+
+.layout-aside-collapse {
+  .nav-left {
+    width: 80px;
+  }
+}

@@ -8,6 +8,8 @@
     "start": "better-npm-run start",
     "test": "better-npm-run test",
     "precommit": "lint-staged",
+    "build:ES5": "babel src -d es5 --copy-files src/assets",
+    "release": "yarn build:ES5 && yarn publish --no-verify",
     "demo:server": "npx styleguidist server",
     "demo:build": "npx styleguidist build"
   },
@@ -35,7 +37,11 @@
     "type": "git",
     "url": "git+https://github.com/longshenpan/antd-components.git"
   },
-  "keywords": [],
+  "files": [
+    "es5",
+    "src"
+  ],
+  "keywords": ["kryfe-components"],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -43,6 +49,7 @@
   },
   "homepage": "https://github.com/longshenpan/antd-components#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
     "babel-loader": "^7.1.5",
